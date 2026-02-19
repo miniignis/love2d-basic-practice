@@ -7,7 +7,7 @@ function love.config(t)
 end
 
 function love.load()
-
+    love.graphics.setBackgroundColor(0.2, 0.6, 0.5)
 end
 
 function love.update(dt)
@@ -15,5 +15,10 @@ function love.update(dt)
 end
 
 function love.draw()
-    
+    love.graphics.setColor(0.1, 0, 0.3)
+    love.graphics.print("Hello!", 32, 32, 0.1)
+
+    love.graphics.setNewFont(25)
+    love.graphics.setColor(1, 1, 1)
+    love.graphics.print("Hey!", 100, 100)
 end
