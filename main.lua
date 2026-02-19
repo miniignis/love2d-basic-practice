@@ -8,6 +8,8 @@ end
 
 function love.load()
     love.graphics.setBackgroundColor(0.2, 0.6, 0.5)
+
+    image = love.graphics.newImage("")
 end
 
 function love.update(dt)
@@ -21,4 +23,6 @@ function love.draw()
     love.graphics.setNewFont(25)
     love.graphics.setColor(1, 1, 1)
     love.graphics.print("Hey!", 100, 100)
+
+    love.graphics.draw(image, 500, 500)
 end
