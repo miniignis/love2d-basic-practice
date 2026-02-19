@@ -9,7 +9,7 @@ end
 function love.load()
     love.graphics.setBackgroundColor(0.2, 0.6, 0.5)
 
-    image = love.graphics.newImage("")
+    image = love.graphics.newImage("flame.png")
 end
 
 function love.update(dt)
