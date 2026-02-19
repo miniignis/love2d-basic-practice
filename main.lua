@@ -10,10 +10,23 @@ function love.load()
     love.graphics.setBackgroundColor(0.2, 0.6, 0.5)
 
     image = love.graphics.newImage("flame.png")
+    
+    flameX, flameY = 0, 0
 end
 
 function love.update(dt)
-
+    if love.keyboard.isDown("w") then
+        flameY = flameY - 500 * dt
+    end
+    if love.keyboard.isDown("a") then
+        flameX = flameX - 500 * dt
+    end
+    if love.keyboard.isDown("s") then
+        flameY = flameY + 500 * dt
+    end
+    if love.keyboard.isDown("d") then
+        flameX = flameX + 500 * dt
+    end
 end
 
 function love.draw()
@@ -24,7 +37,7 @@ function love.draw()
     love.graphics.setColor(1, 1, 1)
     love.graphics.print("Hey!", 100, 100)
 
-    love.graphics.draw(image, 500, 500)
+    love.graphics.draw(image, flameX, flameY)
 
     love.graphics.rectangle("fill", 200, 200, 400, 250)
 
