@@ -1,5 +1,5 @@
-function love.config(t)
-    t.title = "Particle Toy"
+function love.conf(t)
+    t.window.title = "?????"
     t.window.width = 800
     t.window.height = 600
     t.window.resizable = false
@@ -25,4 +25,9 @@ function love.draw()
     love.graphics.print("Hey!", 100, 100)
 
     love.graphics.draw(image, 500, 500)
+
+    love.graphics.rectangle("fill", 200, 200, 400, 250)
+
+    love.graphics.setColor(math.random(), math.random(), math.random()) -- it hurts my eyes! whoops.
+    love.graphics.circle("fill", 100, 200, 32)
 end
